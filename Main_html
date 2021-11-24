@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <?!= include("page-css"); ?>
+  </head>
+  
+  <body>
+    <div class="container">
+      <table>
+        <tr>
+          <td>
+            <center>
+              <img src="https://cdnimg.bnamericas.com/pLhFoIaDzTzrYVzDlRbjwfPNyTlwPJUMvbWQWiGSZvzXlrZwQEEpWHRDkeJSumdH.jpg" alt="Logo MOH" width="120" height="80">
+            </center>
+          </td>
+          <td>
+            <center>
+              <h4> Programa de Evaluación Externa de la Calidad </h4>
+            </center>
+          </td>
+          <td>
+            <center>
+              <img src="https://raw.githubusercontent.com/drprabhjot/HON_CCD/main/Picture1.jpg" alt="Logo MOH" width="120" height="80">
+            </center>
+          </td>
+        </tr>
+      </table>
+      <center>
+        <h5> Formulario de Respuestas </h5>
+        <h6> Datos del Laboratorio Evaluado </h6>
+      </center>
+
+      <div class="row">
+        <div class="input-field col s4">
+          <input  id="region" type="text" class="validate">
+          <label for="region">Región Sanitaria</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="nivel" type="text" class="validate">
+          <label for="nivel">Nivel del Laboratorio</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="cod_es" type="text" class="validate">
+          <label for="cod_es">Código de Estalecimiento de Salud</label>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="input-field col s4">
+          <input  id="departamento" type="text" class="validate">
+          <label for="departamento">Departamento</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="municipio" type="text" class="validate">
+          <label for="municipio">Municipio</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="localidad" type="text" class="validate">
+          <label for="localidad">Localidad (dirección)</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s4">
+          <input  id="jefe" type="text" class="validate">
+          <label for="jefe">Nombre Jefa(e) del Laboratorio</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="telephone" type="number" step="1" class="validate">
+          <label for="telephone"> Teléfono / Celular</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="email" type="email" class="validate">
+          <label for="email"> Correo electrónico</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s4">
+          <select id="panel">
+            <option value="" enabled selected>Seleccionar</option>
+            <option>Panel A</option>
+            <option>Panel B</option>
+            <option>Panel C</option> 
+            <option>Panel D</option>           
+          </select>
+        <label>Codigo del Panel</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="recieved" type="date" class="validate">
+          <label for="recieved"> Fecha de Recepción</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="submitted" type="date" class="validate">
+          <label for="submitted">Fecha de Submisión</label>
+        </div>
+      </div>
+  
+      <div class="row"> 
+        <div class="input-field col s2">
+          <select id="ano">
+            <option value="" enabled selected>Seleccionar</option>
+              <option>2020</option>
+              <option>2021</option>
+              <option>2022</option> 
+              <option>2023</option> 
+              <option>2024</option>
+              <option>2025</option>          
+          </select>
+          <label>Año</label>
+        </div>
+        <div class="input-field col s4">
+          <select id="semester">
+            <option value="" enabled selected>Seleccionar</option>
+              <option>Semestre 1</option>
+              <option>Semestre 2</option>        
+          </select>
+          <label>Semester</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="labname" type="text" class="validate">
+          <label for="labname">Nombre del Laboratorio</label>
+        </div>
+      </div>
+
+    </div> <!--- container close---->
+
+    <!---Table Start---->
+
+    <center>
+      <h6>Resultados del Laboratorio Evaluado</h6>
+      <br>
+    </center>
+
+    <div class="container">
+
+      <style type="text/css">
+
+        .tg  {margin-bottom:20px;border-collapse:collapse;border-spacing:0;}
+        .tg td {border-color:green;border-style:solid;border-width:2px;font-family:Arial, sans-serif;font-size:14px;
+          ;padding:10px 5px;word-break:normal;}
+        .tg th {border-color:green;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          font-weight:normal;padding:10px 5px;word-break:normal;}
+        .tg .tg-c3ow {border-color:green;text-align:center;vertical-align:top}
+        .tg .tg-7btt {border-color:green;font-weight:bold;text-align:center;vertical-align:top}
+        @media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}
+        .tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}
+      </style>
+
+
+      <div class="tg-wrap">
+        <table class="tg">
+          <thead>
+            <tr>
+              <th class="tg-7btt"># Lamina</th>
+              <th class="tg-7btt">Codigo</th>
+              <th class="tg-7btt">Resultado</th>
+              <th class="tg-7btt">Especie</th>
+              <th class="tg-7btt">PV EAA</th>
+              <th class="tg-7btt">PV EAS</th>
+              <th class="tg-7btt">Leu (PV)</th>
+              <th class="tg-7btt">Pf EAA</th>
+              <th class="tg-7btt">Pf EAS</th>
+              <th class="tg-7btt">Leu (Pf)</th>
+            </tr>
+          </thead>
+          <tbody>
+
+
+            <tr><!---Row 1---->
+              <td class="tg-7btt">1</td>
+              <td class="tg-7btt">
+                <input id="cod1" type="text" class="validate">
+              </td>
+              <td class="tg-c3ow">
+                <select id="res1">
+                  <option value="0" enabled selected>Seleccionar</option>
+                  <option> Negativo</option>
+                  <option> Positivo</option>
+                </select>
+              </td>
+              <td class="tg-c3ow">
+                <select id="esp1">
+                  <option value="" enabled selected>Seleccionar</option>
+                  <option> P. falciparum</option>
+                  <option> P. vivax</option>
+                  <option> Mixto</option>
+                </select>
+              </td>
+              <td class="tg-c3ow"><input id="pveaa1" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pveas1" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpv1" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeaa1" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeas1" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpf1" type="number" step="1" class="validate"></td>
+            </tr>
+
+
+            <tr><!---Row 2---->
+              <td class="tg-7btt">2</td>
+              <td class="tg-7btt">
+              <input id="cod2" type="text" class="validate"></td>
+              <td class="tg-c3ow">
+                <select id="res2">
+                  <option value="0" enabled selected>Seleccionar</option>
+                  <option> Negativo</option>
+                  <option> Positivo</option>
+                </select>
+              </td>
+              <td class="tg-c3ow">
+                <select id="esp2">
+                  <option value="" enabled selected>Seleccionar</option>
+                  <option> P. falciparum</option>
+                  <option> P. vivax</option>
+                  <option> Mixto</option>
+                </select>
+              </td>
+              <td class="tg-c3ow"><input id="pveaa2" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pveas2" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpv2" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeaa2" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeas2" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpf2" type="number" step="1" class="validate"></td>
+            </tr>
+
+
+            <tr><!---Row 3---->
+              <td class="tg-7btt">3</td>
+              <td class="tg-7btt">
+              <input id="cod3" type="text" class="validate"></td>
+              <td class="tg-c3ow">
+                <select id="res3">
+                  <option value="0" enabled selected>Seleccionar</option>
+                  <option> Negativo</option>
+                  <option> Positivo</option>
+                </select>
+              </td>
+              <td class="tg-c3ow">
+                <select id="esp3">
+                  <option value="" enabled selected>Seleccionar</option>
+                  <option> P. falciparum</option>
+                  <option> P. vivax</option>
+                  <option> Mixto</option>
+                </select>
+              </td>
+              <td class="tg-c3ow"><input id="pveaa3" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pveas3" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpv3" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeaa3" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeas3" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpf3" type="number" step="1" class="validate"></td>
+            </tr>
+
+
+            <tr><!---Row 4---->
+              <td class="tg-7btt">4</td>
+              <td class="tg-7btt">
+              <input id="cod4" type="text" class="validate"></td>
+              <td class="tg-c3ow">
+                <select id="res4">
+                  <option value="0" enabled selected>Seleccionar</option>
+                  <option> Negativo</option>
+                  <option> Positivo</option>
+                </select>
+              </td>
+              <td class="tg-c3ow">
+                <select id="esp4">
+                  <option value="" enabled selected>Seleccionar</option>
+                  <option> P. falciparum</option>
+                  <option> P. vivax</option>
+                  <option> Mixto</option>
+                </select>
+              </td>
+              <td class="tg-c3ow"><input id="pveaa4" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pveas4" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpv4" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeaa4" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeas4" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpf4" type="number" step="1" class="validate"></td>
+            </tr>
+
+
+            <tr><!---Row 5---->
+              <td class="tg-7btt">5</td>
+              <td class="tg-7btt">
+              <input id="cod5" type="text" class="validate"></td>
+              <td class="tg-c3ow">
+                <select id="res5">
+                  <option value="0" enabled selected>Seleccionar</option>
+                  <option> Negativo</option>
+                  <option> Positivo</option>
+                </select>
+              </td>
+              <td class="tg-c3ow">
+                <select id="esp5">
+                  <option value="" disabled selected>Seleccionar</option>
+                  <option> P. falciparum</option>
+                  <option> P. vivax</option>
+                  <option> Mixto</option>
+                </select>
+              </td>
+              <td class="tg-c3ow"><input id="pveaa5" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pveas5" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpv5" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeaa5" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeas5" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpf5" type="number" step="1" class="validate"></td>
+            </tr>
+
+
+            <tr><!---Row 6---->
+              <td class="tg-7btt">6</td>
+              <td class="tg-7btt">
+                <input id="cod6" type="text" class="validate">
+              </td>
+              <td class="tg-c3ow">
+                <select id="res6">
+                  <option value="0" enabled selected>Seleccionar</option>
+                  <option> Negativo</option>
+                  <option> Positivo</option>
+                </select>
+              </td>
+              <td class="tg-c3ow">
+                <select id="esp6">
+                  <option value="" enabled selected>Seleccionar</option>
+                  <option> P. falciparum</option>
+                  <option> P. vivax</option>
+                  <option> Mixto</option>
+                </select>
+              </td>
+              <td class="tg-c3ow"><input id="pveaa6" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pveas6" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpv6" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeaa6" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeas6" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpf6" type="number" step="1" class="validate"></td>
+            </tr>
+
+
+            <tr><!---Row 7---->
+              <td class="tg-7btt">7</td>
+              <td class="tg-7btt">
+              <input id="cod7" type="text" class="validate"></td>
+              <td class="tg-c3ow">
+                <select id="res7">
+                  <option value="0" enabled selected>Seleccionar</option>
+                  <option> Negativo</option>
+                  <option> Positivo</option>
+                </select>
+              </td>
+              <td class="tg-c3ow">
+                <select id="esp7">
+                  <option value="" enabled selected>Seleccionar</option>
+                  <option> P. falciparum</option>
+                  <option> P. vivax</option>
+                  <option> Mixto</option>
+                </select>
+              </td>
+              <td class="tg-c3ow"><input id="pveaa7" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pveas7" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpv7" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeaa7" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeas7" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpf7" type="number" step="1" class="validate"></td>
+            </tr>
+
+
+            <tr><!---Row 8---->
+              <td class="tg-7btt">8</td>
+              <td class="tg-7btt">
+              <input id="cod8" type="text" class="validate"></td>
+              <td class="tg-c3ow">
+                <select id="res8">
+                  <option value="0" enabled selected>Seleccionar</option>
+                  <option> Negativo</option>
+                  <option> Positivo</option>
+                </select>
+              </td>
+              <td class="tg-c3ow">
+                <select id="esp8">
+                  <option value="" enabled selected>Seleccionar</option>
+                  <option> P. falciparum</option>
+                  <option> P. vivax</option>
+                  <option> Mixto</option>
+                </select>
+              </td>
+              <td class="tg-c3ow"><input id="pveaa8" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pveas8" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpv8" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeaa8" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeas8" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpf8" type="number" step="1" class="validate"></td>
+            </tr>
+
+
+            <tr><!---Row 9---->
+              <td class="tg-7btt">9</td>
+              <td class="tg-7btt">
+              <input id="cod9" type="text" class="validate"></td>
+              <td class="tg-c3ow">
+                <select id="res9">
+                  <option value="0" enabled selected>Seleccionar</option>
+                  <option> Negativo</option>
+                  <option> Positivo</option>
+                  </select>
+                </td>
+              <td class="tg-c3ow">
+                <select id="esp9">
+                  <option value="" enabled selected>Seleccionar</option>
+                  <option> P. falciparum</option>
+                  <option> P. vivax</option>
+                  <option> Mixto</option>
+                </select>
+              </td>
+              <td class="tg-c3ow"><input id="pveaa9" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pveas9" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpv9" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeaa9" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeas9" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpf9" type="number" step="1" class="validate"></td>
+            </tr>
+
+
+            <tr><!---Row 10---->
+              <td class="tg-7btt">10</td>
+              <td class="tg-7btt">
+              <input id="cod10" type="text" class="validate"></td>
+              <td class="tg-c3ow">
+                <select id="res10">
+                  <option value="0" enabled selected>Seleccionar</option>
+                  <option> Negativo</option>
+                  <option> Positivo</option>
+                </select>
+              </td>
+              <td class="tg-c3ow">
+                <select id="esp10">
+                  <option value="" enabled selected>Seleccionar</option>
+                  <option> P. falciparum</option>
+                  <option> P. vivax</option>
+                  <option> Mixto</option>
+                </select>
+              </td>
+              <td class="tg-c3ow"><input id="pveaa10" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pveas10" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpv10" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeaa10" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="pfeas10" type="number" step="1" class="validate"></td>
+              <td class="tg-c3ow"><input id="lpf10" type="number" step="1" class="validate"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!---Table END ---->
+
+      <!---comments section start ---->
+      <center>
+        <p> *EAS: Estadios Asexuales Sanguíneos (Anillos, Trofozoítos, Esquizontes)</p>
+        <p> *ESS: Estadios Sexuales Sanguíneos (Gametocitos)</p>
+        <br>
+        <h6>Commentarios del Laboratorio Evaluado</h6>
+        <p></p>
+      </center>
+      <!---Table start---->
+
+      <div class="tg-wrap">
+        <table class="tg">
+          <thead>
+            <tr>
+              <b><th class="tg-7btt">Estado de las láminas enviadas.</th></b>
+              <b><th class="tg-7btt">Escriba comentario.</th></b>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tg-7btt">Se recibió en un día hábil</td>
+              <td class="tg-7btt"><input id="comment1" type="text" class="validate"></td>
+            </tr>
+            <tr>
+              <td class="tg-7btt">Fueron recibidas con daños.</td>
+              <td class="tg-7btt"><input id="comment2" type="text" class="validate"></td>
+            </tr>
+            <tr>
+              <td class="tg-7btt">Fueron recibidas incompletas o papelería incompleta.</td>
+              <td class="tg-7btt"><input id="comment3" type="text" class="validate"></td>
+            </tr>
+            <tr>
+              <td class="tg-7btt">Si hubo daños cuales y cuantos. Explicar (envia fotos por whatsapp / correo a lab nacional)</td>
+              <td class="tg-7btt"><input id="comment4" type="text" class="validate"></td>
+            </tr>
+            <tr>
+              <td class="tg-7btt">Calidad de láminas</td>
+              <td class="tg-7btt"><input id="comment5" type="text" class="validate"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <!---Comment Table End---->
+
+    </div> <!---CONTAINER END ---->
+
+    <!--- button start---->
+
+    <div class="row"> 
+      <center> 
+        <button id="btn" class="btn waves-effect waves-light" type="submit" name="action">Someter
+        <i class="material-icons right">send</i>
+        </button>
+      </center>
+    </div> <!--- button close---->
+
+
+    <p id="demo"></p>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <?!= include("page-js"); ?>
+  </body>
+</html>
